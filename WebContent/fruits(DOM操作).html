@@ -1,0 +1,36 @@
+<!-- 練習24－1 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Fruits</title>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var list = $('#list');
+	list.append('<li>りんご</li>');
+	list.append('<li>バナナ</li>');
+	list.prepend('<li>ぶどう</li>');
+	list.after('<p>after</p>');
+	list.before('<p>before</p>');
+
+	let n = 1;/* 要素追加イベント */
+	const add = $('#add');
+	add.click(function(){
+		list.append('<li>'+n+'番目</li>');
+		n++;
+	});
+
+});
+
+
+
+</script>
+
+</head>
+<body>
+<ul id ="list"></ul>
+<button id="add">追加</button>
+</body>
+</html>

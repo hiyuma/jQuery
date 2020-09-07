@@ -1,0 +1,53 @@
+<!-- 練習18－6 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スクロール</title>
+<style>
+body{
+height:3000px;
+}
+#return-top{
+background-color: #d66262;
+border-radius: 50%;
+bottom: 10px;
+right: 10px;
+color: #fff;
+font-size: 14px;
+height: 50px;
+width: 50px;
+line-height: 50px;
+text-align: center;
+position: fixed;
+text-decoration: none;
+display: none;
+}
+</style>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	const returnTop = $('#return-top');
+	$(window).scroll(function(){
+		const pos = $(this).scrollTop();
+		if(pos > 500){
+			returnTop.fadeIn('slow');
+		} else {
+			returnTop.fadeOut('slow')
+		}
+	});
+	/* returnTop.click(function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
+	}); */
+});
+</script>
+
+</head>
+<body>
+<h1>スクロールテスト</h1>
+<a href="#" id="return-top">Top</a>
+
+</body>
+</html>

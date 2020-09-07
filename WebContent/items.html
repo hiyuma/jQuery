@@ -1,0 +1,86 @@
+<!-- 練習22－3 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- 練習23－2追加 -->
+<title>MySystem</title>
+</head>
+<body>
+	<!-- start練習23－2追加 -->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">MySystem</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#mynavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="mynavbar">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class=" nav-link" href="#">会員管理</a></li>
+				<li class=" nav-item active"><a class="nav-link" href="#">商品管理</a></li>
+			</ul>
+			<ul class="navbar-nav ">
+				<li class="nav-item"><a class="nav-link" href="#">ログアウト</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- end練習23－2追加 -->
+
+	<div class="container">
+		<h1>商品一覧</h1>
+		<div class="row">
+			<div class="col-md-12">
+			<!-- 練習23－3 追加-->
+				<ul class="pagination">
+					<li class="active page-item"><a class="page-link" href="#">1</a></li>
+					<li class="page-item"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+				</ul>
+			<!-- end 練習23－3 追加-->
+
+				<table class="table table-bordered table-striped">
+					<tr>
+						<th>メーカー</th>
+						<th>商品名</th>
+						<th>価格</th>
+						<th>編集</th>
+					</tr>
+					<tr>
+						<td>BILOT</td>
+						<td>万年筆</td>
+						<td>10,500 円</td>
+						<td><a href="#" class="btn btn-outline-dark btn-sm">編集</a></td>
+					</tr>
+					<tr>
+						<td>UNITED</td>
+						<td>名刺入れ</td>
+						<td>1,260 円</td>
+						<td><a href="#" class="btn btn-outline-dark btn-sm">編集</a></td>
+					</tr>
+					<tr>
+						<td>NEVA</td>
+						<td>システム手帳</td>
+						<td>8,400 円</td>
+						<td><a href="#" class="btn btn-outline-dark btn-sm">編集</a></td>
+					</tr>
+
+
+				</table>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<a href="additem.html" class="btn btn-primary">商品の追加</a>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

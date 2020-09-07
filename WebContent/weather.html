@@ -1,0 +1,40 @@
+<!-- 練習25－2－1 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<title>Weather</title>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script> <!--bundle抜けてる？ -->
+<script src="js/main2.js"></script>
+
+<style>
+.container{
+ width: 600px;
+ padding-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="container text-center">
+<h3>各地のお天気を調べましょう</h3>
+<form id="weather" class="form-inline">
+<select class="form-control" id ="area">
+<option value = "040010">仙台</option>
+<option value = "130010">東京</option>
+<option value = "230010">名古屋</option>
+<option value = "270000">大阪</option>
+<option value = "400010">福岡</option>
+<option value = "471010">那覇</option>
+</select>
+<input type="submit" value="Send" class="btn btn-primary">
+</form>
+ <h1 class="weather-title"></h1>
+ <div class="row"></div>
+</div>
+</body>
+</html>

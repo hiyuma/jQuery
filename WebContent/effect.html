@@ -1,0 +1,40 @@
+<!-- 練習18 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>エフェクト</title>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#show').click(function(){
+		/* $('#photo').show('slow'); */
+		/* $('#photo').slideDown(); */
+		$('#photo').fadeIn();
+	});
+	$('#hide').click(function(){
+		/* $('#photo').hide(1000); */
+		/* $('#photo').slideUp(); */
+		$('#photo').fadeOut('slow', 'linear', function() {
+			alert('処理が完了しました');
+		});
+	});
+	$('#toggle').click(function(){
+		/* $('#photo').toggle('slow'); */
+		/* $('#photo').slideToggle(); */
+		$('#photo').fadeToggle(5000);
+	});
+
+});</script>
+</head>
+<body>
+<h1>エフェクト</h1>
+<p>
+<button id="show">表示</button>
+<button id="hide">非表示</button>
+<button id="toggle">トグル</button>
+</p>
+<p><img id="photo" alt="" src="images/Koala.jpg" width="400"></p>
+</body>
+</html>

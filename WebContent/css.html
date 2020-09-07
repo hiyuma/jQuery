@@ -1,0 +1,36 @@
+<!-- 練習16 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>CSSの操作</title>
+<style type="text/css">
+#item {
+	width: 80px;
+	height: 40px;
+	padding: 10px;
+	background-color: #999;
+}
+</style>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#change').click(function() {
+			$('#item').css({
+			backgroundColor: '#f00',
+			width: '240px'
+			});
+		});
+	});
+</script>
+</head>
+
+<body>
+<h1>CSSの操作</h1>
+<p>
+<button id='change'>変更</button>
+</p>
+<div id='item'>ITEM</div>
+</body>
+</html>

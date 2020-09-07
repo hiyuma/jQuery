@@ -1,0 +1,25 @@
+<!-- 練習17 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>イベント</title>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.item').hover(function() {
+			$(this).css('background-color', '#f00');
+		}, function() {
+			$(this).css('background-color', '#fff');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>イベント</h1>
+	<h2 class='item'>ITEM 1</h2>
+	<h2 class='item'>ITEM 2</h2>
+	<h2 class='item'>ITEM 3</h2>
+</body>
+</html>

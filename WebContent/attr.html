@@ -1,0 +1,26 @@
+<!--練習16 attribute（属性）の略 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>属性の操作</title>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#photo').click(function(){
+		$(this).attr('src', 'images/Penguins.jpg');
+		/* $('#title').html('<strong>ペンギン</strong>'); */
+		$('#title').text('<strong>ペンギン</strong>');
+	});
+	/* const src = $('#photo').attr('src');
+	alert(src); */
+});
+</script>
+</head>
+<body>
+<h1>属性の操作</h1>
+<img id='photo' src='images/Koala.jpg' width='400'>
+<p id='title'><strong>コアラ</strong></p>
+</body>
+</html>

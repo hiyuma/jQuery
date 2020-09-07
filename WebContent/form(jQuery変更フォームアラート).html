@@ -1,0 +1,43 @@
+<!-- 練習17 3-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>フォームイベント</title>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('select[name=season]').change(function(){
+		const season = $(this).val();
+		alert('季節が'+ season + 'に変更されました');
+	});
+	$('#form1').submit(function()){
+		const submit = confirm('フォームを送信してよろしいですか？');
+		if(!submit){
+			alert('フォーム送信をキャンセルしました。');
+			return false;
+		}
+	}
+});
+</script>
+</head>
+<body>
+	<h1>フォームイベント</h1>
+	<form id='form1' action='' method='post'>
+		<p>
+			好きな季節： <select name='season'>
+				<option>春</option>
+				<option>夏</option>
+				<option>秋</option>
+				<option>冬</option>
+			</select>
+		</p>
+
+		<p>
+			<input type='submit' value='送信'>
+		</p>
+
+	</form>
+</body>
+</html>
